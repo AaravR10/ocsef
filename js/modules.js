@@ -2,24 +2,13 @@ const moduleContentArea = document.getElementById('module-content-area');
 
 const moduleData = {
     "food-waste": {
-        title: "Reducing Food Waste",
-        content: `
-            <h3>Understanding the Impact</h3>
-            <p>Food waste has significant environmental, social, and economic costs. When food rots in landfills, it produces methane, a potent greenhouse gas...</p>
-            <img src="images/food_waste_infographic.png" alt="Food Waste Infographic" style="max-width: 80%; margin: 15px auto; display: block;">
-            <h3>Practical Tips for Home</h3>
-            <ul>
-                <li>Plan your meals and make shopping lists.</li>
-                <li>Understand date labels ('Use By' vs 'Best Before').</li>
-                <li>Store food properly to extend its life.</li>
-                <li>Get creative with leftovers.</li>
-                <li>Compost food scraps if possible.</li>
-            </ul>
-            <a href="#" class="btn-secondary disabled">Download Guide (PDF Coming Soon)</a>
-        `
+        title: "Reducing Food Waste (Interactive Lesson)", // Updated title for clarity
+        type: "genially", // Identifier for Genially modules
+        url: "https://view.genially.com/680d18dfec7b9bf3a2871fe5/presentation-reducing-food-waste" // URL of the Genially presentation
     },
     "food-labels": {
         title: "Understanding Food Labels",
+        // This module still uses the 'content' property for static HTML/quiz
         content: `
             <h3>Decoding Common Labels</h3>
             <p>Labels like 'Organic', 'Fair Trade', 'Rainforest Alliance Certified', and expiration dates tell different stories about sustainability and safety.</p>
@@ -53,6 +42,7 @@ const moduleData = {
     },
     "circular-economy": {
         title: "Introduction to Circular Economy",
+        // This module also uses static 'content'
         content: `
             <h3>Linear vs. Circular</h3>
             <p>The traditional linear economy model is 'take-make-dispose'. A circular economy aims to keep resources in use for as long as possible, extracting maximum value, then recovering and regenerating products and materials.</p>
@@ -78,14 +68,40 @@ function loadModule(moduleId) {
     }
     if (moduleData[moduleId]) {
         const data = moduleData[moduleId];
-        moduleContentArea.innerHTML = `<h2>${data.title}</h2>${data.content}`;
-         // Scroll to the content area after loading
+        let contentHTML = ''; // Variable to hold the final HTML to be inserted
+
+        if (data.type === 'genially' && data.url) {
+            // Construct the responsive iframe HTML if it's a Genially module
+            contentHTML = `
+                <div style="position: relative; padding-bottom: 56.25%; /* 16:9 aspect ratio */ height: 0; overflow: hidden; max-width: 100%;">
+                    <iframe
+                        src="${data.url}"  /* Use the URL from the data object */
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                        frameborder="0"
+                        allowfullscreen="true"
+                        title="${data.title}" /* Use title from data object for accessibility */ >
+                    </iframe>
+                </div>`;
+        } else if (data.content) {
+            // Use the static content if the 'content' property exists
+            contentHTML = data.content;
+        } else {
+            // Fallback if neither type/url nor content is found
+            contentHTML = `<p>Content not available for this module.</p>`;
+        }
+
+        // *** THIS IS THE CORRECTED LINE: Use contentHTML, not data.content ***
+        moduleContentArea.innerHTML = `<h2>${data.title}</h2>${contentHTML}`;
+
+        // Scroll to the content area after loading
         moduleContentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
     } else {
         moduleContentArea.innerHTML = `<p>Sorry, content for module ID "${moduleId}" could not be found.</p>`;
     }
 }
 
+// Quiz function remains the same, only relevant for modules with 'content' property containing quiz HTML
 function checkQuizAnswer(questionName, correctAnswerValue) {
     const options = document.querySelectorAll(`input[name="${questionName}"]`);
     const feedbackDiv = document.getElementById(`feedback-${questionName}`);
