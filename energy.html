@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Energy Guides - Sustainable Living Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+             <img src="images/logo.png" alt="Sustainable Living Hub Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="modules.html">Learning Modules</a></li>
+                    <li><a href="energy.html" class="active">Clean Energy</a></li>
+                    <li><a href="community.html">Community Hub</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+     <main class="container page-padding">
+        <h1>Clean Energy Education & DIY Guides (SDG 4, 7)</h1>
+        <p>Learn about renewable energy sources and find practical guides for energy saving at home.</p>
+
+        <div class="content-grid">
+            <!-- Guide 1: How Solar Panels Work -->
+            <div class="content-card">
+                 <img src="images/solar_panel_diagram.png" alt="Solar Panel Diagram" style="cursor: pointer;" onclick="showSolarExplanation()">
+                <h2>How Solar Panels Work (Interactive Demo)</h2>
+                <p>A visual guide explaining photovoltaic technology. Click the image!</p>
+                <div id="solar-explanation" style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+                    <p>1. Sunlight (photons) hits the silicon cells in the panel.</p>
+                    <p>2. Electrons are knocked loose, creating a direct current (DC).</p>
+                    <p>3. An inverter converts the DC electricity to alternating current (AC) usable in homes.</p>
+                    <p>4. The AC power flows through your home's electrical panel.</p>
+                    <button onclick="hideSolarExplanation()">Close</button>
+                </div>
+            </div>
+
+            <!-- Guide 2: DIY Solar Phone Charger -->
+             <div class="content-card">
+                 <img src="images/diy_charger_icon.png" alt="DIY Charger Icon">
+                <h2>DIY: Build a Solar Phone Charger</h2>
+                <p>A step-by-step guide using simple components. (Full guide coming soon!)</p>
+                <a href="#" class="btn-secondary disabled">View Guide (Coming Soon)</a>
+            </div>
+
+            <!-- Guide 3: Home Energy Audit -->
+            <div class="content-card">
+                 <img src="images/energy_audit_icon.png" alt="Energy Audit Icon">
+                <h2>Understanding Home Energy Audits</h2>
+                <p>Learn how to identify energy waste in your home and prioritize improvements.</p>
+                 <a href="#" class="btn-secondary disabled">Learn More (Coming Soon)</a>
+            </div>
+             <!-- Add more guides -->
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Sustainable Living Hub.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script> <!-- For general things like explanations -->
+</body>
+</html>

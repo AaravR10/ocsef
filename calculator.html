@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Calculator - Sustainable Living Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+             <img src="images/logo.png" alt="Sustainable Living Hub Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="modules.html">Learning Modules</a></li>
+                    <li><a href="energy.html">Clean Energy</a></li>
+                    <li><a href="community.html">Community Hub</a></li>
+                    <li><a href="calculator.html" class="active">Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-padding">
+        <h1>Sustainability Calculator (SDG 7, 12)</h1>
+        <p>Estimate your carbon footprint related to consumption and energy use. Get personalized tips!</p>
+        <p><small>Note: This is a simplified calculator for demonstration purposes. Real calculations are more complex.</small></p>
+
+        <form id="calculator-form">
+            <h2>Transportation</h2>
+            <div class="form-group">
+                <label for="commute-distance">Average Daily Commute Distance (km):</label>
+                <input type="number" id="commute-distance" value="10" min="0">
+            </div>
+            <div class="form-group">
+                <label for="commute-mode">Primary Commute Mode:</label>
+                <select id="commute-mode">
+                    <option value="car_gasoline">Car (Gasoline)</option>
+                    <option value="car_electric">Car (Electric)</option>
+                    <option value="public_transport">Public Transport</option>
+                    <option value="bike">Bicycle</option>
+                    <option value="walk">Walk</option>
+                </select>
+            </div>
+             <div class="form-group">
+                <label for="flights">Short-haul Flights (per year):</label>
+                <input type="number" id="flights-short" value="0" min="0">
+             </div>
+             <div class="form-group">
+                <label for="flights">Long-haul Flights (per year):</label>
+                <input type="number" id="flights-long" value="0" min="0">
+            </div>
+
+
+            <h2>Home Energy</h2>
+             <div class="form-group">
+                <label for="electricity">Monthly Electricity Consumption (kWh):</label>
+                <input type="number" id="electricity" value="300" min="0">
+             </div>
+             <div class="form-group">
+                 <label for="heating-fuel">Primary Heating Fuel:</label>
+                 <select id="heating-fuel">
+                     <option value="natural_gas">Natural Gas</option>
+                     <option value="electricity">Electricity</option>
+                     <option value="oil">Heating Oil</option>
+                     <option value="wood">Wood</option>
+                     <option value="none">None / District Heating</option>
+                 </select>
+            </div>
+             <div class="form-group">
+                <label for="renewable-source">Do you use renewable energy sources (e.g., solar panels)?</label>
+                 <select id="renewable-source">
+                    <option value="no">No</option>
+                    <option value="yes_partial">Yes, partially</option>
+                    <option value="yes_full">Yes, fully</option>
+                 </select>
+            </div>
+
+             <h2>Consumption (Simplified)</h2>
+              <div class="form-group">
+                 <label for="diet">Primary Diet Type:</label>
+                 <select id="diet">
+                     <option value="meat_heavy">Meat Heavy</option>
+                     <option value="meat_average">Average Meat Consumption</option>
+                     <option value="vegetarian">Vegetarian</option>
+                     <option value="vegan">Vegan</option>
+                 </select>
+            </div>
+             <div class="form-group">
+                 <label for="waste">Household Waste Produced Weekly:</label>
+                 <select id="waste">
+                     <option value="high">High (More than 1 large bin)</option>
+                     <option value="average">Average (1 large bin)</option>
+                     <option value="low">Low (Less than 1 small bin, recycle/compost most)</option>
+                 </select>
+            </div>
+
+
+            <button type="button" class="btn" onclick="calculateFootprint()">Calculate My Estimated Footprint</button>
+        </form>
+
+        <div id="calculator-results" style="margin-top: 30px; display: none;">
+            <h2>Your Estimated Results:</h2>
+            <p><strong>Estimated Annual Carbon Footprint:</strong> <span id="footprint-value">--</span> kg CO2e</p>
+            <div id="result-breakdown">
+                <!-- Breakdown will be added here -->
+            </div>
+            <h3>Personalized Tips:</h3>
+            <ul id="personalized-tips">
+                <!-- Tips will be added here -->
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Sustainable Living Hub.</p>
+        </div>
+    </footer>
+
+    <script src="js/calculator.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

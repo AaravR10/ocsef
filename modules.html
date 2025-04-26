@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Modules - Sustainable Living Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+             <img src="images/logo.png" alt="Sustainable Living Hub Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="modules.html" class="active">Learning Modules</a></li>
+                    <li><a href="energy.html">Clean Energy</a></li>
+                    <li><a href="community.html">Community Hub</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-padding">
+        <h1>Interactive Learning Modules (SDG 4, 12)</h1>
+        <p>Dive into topics like waste reduction, circular economy, conscious consumption, and more.</p>
+
+        <div class="module-list">
+            <!-- Module 1: Food Waste -->
+            <div class="module-card">
+                <img src="images/food_waste_icon.png" alt="Food Waste Icon">
+                <h2>Reducing Food Waste</h2>
+                <p>Learn practical tips to minimize food waste at home and understand its impact.</p>
+                <button class="btn-secondary" onclick="loadModule('food-waste')">Start Module</button>
+            </div>
+
+            <!-- Module 2: Food Labels -->
+             <div class="module-card">
+                <img src="images/food_label_icon.png" alt="Food Label Icon">
+                <h2>Understanding Food Labels</h2>
+                <p>Decode labels to make informed, sustainable choices. Includes interactive quiz!</p>
+                <button class="btn-secondary" onclick="loadModule('food-labels')">Start Module</button>
+            </div>
+
+            <!-- Module 3: Circular Economy -->
+            <div class="module-card">
+                <img src="images/circular_economy_icon.png" alt="Circular Economy Icon">
+                <h2>Intro to Circular Economy</h2>
+                <p>Understand the principles of keeping resources in use for as long as possible.</p>
+                 <button class="btn-secondary" onclick="loadModule('circular-economy')">Start Module</button>
+            </div>
+             <!-- Add more modules -->
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Area to load module content -->
+        <div id="module-content-area">
+            <!-- Module content will be loaded here by JavaScript -->
+            <p>Select a module above to begin.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Sustainable Living Hub.</p>
+        </div>
+    </footer>
+
+    <script src="js/modules.js"></script>
+    <script src="js/script.js"></script> <!-- General scripts if needed -->
+</body>
+</html>
