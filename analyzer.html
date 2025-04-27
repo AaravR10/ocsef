@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label Analyzer - EcoLeap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Add specific styles for this page */
+        #api-key-input {
+            width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;
+        }
+        .button-container { /* Container for upload/camera buttons */
+             text-align: center; margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;
+        }
+        #camera-container { /* Container for video feed and capture button */
+             display: none; /* Hidden initially */
+             margin-top: 20px;
+             border: 1px solid #ccc;
+             padding: 15px;
+             background-color: #f0f0f0;
+             border-radius: 5px;
+             text-align: center;
+        }
+        #video-feed {
+            display: block;
+            width: 100%;
+            max-width: 500px; /* Limit video width */
+            height: auto;
+            margin: 0 auto 15px auto; /* Center video and add bottom margin */
+            border: 1px solid #999;
+            background-color: #333; /* Placeholder background */
+        }
+        #photo-canvas { /* Hidden canvas for taking snapshot */
+            display: none;
+        }
+         #capture-button, #cancel-camera-button {
+             margin: 5px;
+         }
+        #image-preview-container {
+            margin-top: 20px; text-align: center;
+        }
+        #image-preview {
+            max-width: 100%; max-height: 300px; border: 1px solid #ccc; margin-top: 10px; display: none; object-fit: contain;
+        }
+        #label-upload { display: none; }
+        .upload-label, #use-camera-button { /* Style both buttons similarly */
+            display: inline-block; padding: 10px 15px; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; border: none; font-size: 1em;
+        }
+         .upload-label:hover, #use-camera-button:hover { background-color: #0056b3; }
+
+        #analyze-button {
+            margin-top: 15px; display: block; margin-left: auto; margin-right: auto;
+        }
+        #loading-indicator {
+            margin-top: 20px; padding: 15px; background-color: #eef; border: 1px solid #cce; border-radius: 5px; text-align: center; color: #0056b3; font-weight: bold; display: none;
+        }
+        #analysis-result {
+            margin-top: 30px; padding: 20px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; white-space: pre-wrap; display: none;
+        }
+        #analysis-result h3 {
+            margin-top: 0; margin-bottom: 15px; color: #28a745;
+        }
+        .error-message { color: #dc3545; font-weight: bold; margin-top: 10px; }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+             <img src="images/logo.png" alt="Sustainable Living Hub Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="modules.html">Learning Modules</a></li>
+                    <li><a href="energy.html">Clean Energy</a></li>
+                    <li><a href="community.html">Community Hub</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="analyzer.html" class="active">Label Analyzer</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-padding">
+        <h1>Food Label Analyzer</h1>
+        <p>Enter <strong>your own</strong> Google AI API Key</p>
+        <p><small><strong>Disclaimer:</strong> This is for demonstration/testing only. Do not rely on this for actual decisions.</small></p>
+
+        <!-- API Key Input -->
+         <div class="form-group">
+            <label for="api-key-input">Your Google AI API Key (Saved in Cookie):</label>
+            <input type="password" id="api-key-input" placeholder="Enter your API key here">
+         </div>
+
+        <!-- Action Buttons: Upload or Use Camera -->
+        <div class="button-container">
+             <div><!-- Wrapper for file input -->
+                <label for="label-upload" class="upload-label">Choose Label Image</label>
+                <input type="file" id="label-upload" accept="image/*">
+            </div>
+            <button id="use-camera-button" type="button" class="btn-secondary">Use Camera</button>
+        </div>
+
+        <!-- Camera View Area -->
+        <div id="camera-container">
+            <video id="video-feed" playsinline autoplay muted></video> <!-- playsinline/muted often needed for autoplay -->
+             <div>
+                 <button id="capture-button" type="button" class="btn">Capture Photo</button>
+                 <button id="cancel-camera-button" type="button" class="btn-secondary">Cancel Camera</button>
+             </div>
+        </div>
+        <canvas id="photo-canvas"></canvas> <!-- Hidden canvas -->
+
+        <!-- Image Preview -->
+        <div id="image-preview-container">
+             <p id="preview-label" style="font-weight: bold; display: none;">Image Preview:</p>
+             <img id="image-preview" src="#" alt="Label Preview">
+        </div>
+
+        <!-- Analyze Button -->
+         <button id="analyze-button" class="btn" disabled>Analyze Label (Requires API Key & Image)</button>
+
+        <!-- Loading Indicator -->
+        <div id="loading-indicator">
+            <p>Contacting Google AI... (Attempting direct browser call)</p>
+        </div>
+
+        <!-- Analysis Result Area -->
+        <div id="analysis-result">
+            <h3>Analysis:</h3>
+            <p id="result-text">Analysis will appear here.</p>
+            <p class="error-message" id="error-message"></p> <!-- For displaying errors -->
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 EcoLeap</p>
+        </div>
+    </footer>
+
+    <script src="js/analyzer.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

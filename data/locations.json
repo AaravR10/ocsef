@@ -1,0 +1,757 @@
+[
+    {
+      "name": "RIVER BEAS AT U/S MANALI",
+      "state": "HIMACHAL PRADESH",
+      "lat": 32.249,
+      "lon": 77.189,
+      "type": "water",
+      "fecal_coliform_max": 170,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 170 MPN/100ml"
+    },
+    {
+      "name": "RIVER BEAS AT D/S MANALI",
+      "state": "HIMACHAL PRADESH",
+      "lat": 32.235,
+      "lon": 77.185,
+      "type": "water",
+      "fecal_coliform_max": 1600,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 1600 MPN/100ml"
+    },
+    {
+      "name": "RIVER BEAS D/S KULLU",
+      "state": "HIMACHAL PRADESH",
+      "lat": 31.950,
+      "lon": 77.110,
+      "type": "water",
+      "fecal_coliform_max": 540,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 540 MPN/100ml"
+    },
+    {
+      "name": "RIVER BEAS AT PANDOH DAM",
+      "state": "HIMACHAL PRADESH",
+      "lat": 31.678,
+      "lon": 77.060,
+      "type": "water",
+      "fecal_coliform_max": 79,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 79 MPN/100ml"
+    },
+    {
+      "name": "RIVER BEAS AT D/S JAISINGHPUR",
+      "state": "HIMACHAL PRADESH",
+      "lat": 31.898,
+      "lon": 76.598,
+      "type": "water",
+      "fecal_coliform_max": 68,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 68 MPN/100ml"
+    },
+    {
+      "name": "RIVER BEAS AT D/S ALAMPUR",
+      "state": "HIMACHAL PRADESH",
+      "lat": 31.780,
+      "lon": 76.550,
+      "type": "water",
+      "fecal_coliform_max": 45,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 45 MPN/100ml"
+    },
+    {
+      "name": "RIVER BEAS AT PONG DAM, PONG VILLAGE",
+      "state": "HIMACHAL PRADESH",
+      "lat": 32.015,
+      "lon": 76.060,
+      "type": "water",
+      "fecal_coliform_max": 78,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 78 MPN/100ml"
+    },
+    {
+      "name": "RIVER BEAS AT D/S PONG DAM",
+      "state": "HIMACHAL PRADESH",
+      "lat": 31.975,
+      "lon": 76.050,
+      "type": "water",
+      "fecal_coliform_max": 68,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 68 MPN/100ml"
+    },
+    {
+      "name": "RIVER BEAS AT TALWARA (PONG DAM)",
+      "state": "HIMACHAL PRADESH",
+      "lat": 31.949,
+      "lon": 75.937,
+      "type": "water",
+      "fecal_coliform_max": 3800,
+      "quality": "poor",
+      "desc": "Max Fecal Coliform: 3800 MPN/100ml"
+    },
+    {
+      "name": "RIVER BEAS AT D/S CHANGARWA VILLAGE, (PUNJAB)",
+      "state": "PUNJAB",
+      "lat": 31.92,
+      "lon": 75.85,
+      "type": "water",
+      "fecal_coliform_max": 22000,
+      "quality": "poor",
+      "desc": "Max Fecal Coliform: 22000 MPN/100ml"
+    },
+    {
+      "name": "RIVER SUTLEJ AT D/S KIRATPUR SAHIB, PUNJAB",
+      "state": "PUNJAB",
+      "lat": 31.177,
+      "lon": 76.568,
+      "type": "water",
+      "fecal_coliform_max": 250,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 250 MPN/100ml"
+    },
+    {
+      "name": "RIVER SUTLEJ AT LUDHIANA D/S",
+      "state": "PUNJAB",
+      "lat": 30.95,
+      "lon": 75.92,
+      "type": "water",
+      "fecal_coliform_max": 1700000,
+      "quality": "poor",
+      "desc": "Max Fecal Coliform: 1,700,000 MPN/100ml"
+    },
+    {
+      "name": "RIVER YAMUNA AT PALLA (DELHI)",
+      "state": "DELHI",
+      "lat": 28.89,
+      "lon": 77.22,
+      "type": "water",
+      "fecal_coliform_max": 2600000,
+      "quality": "poor",
+      "desc": "Max Fecal Coliform: 2,600,000 MPN/100ml"
+    },
+    {
+      "name": "RIVER GANGA AT HAR-KI-PAURI GHAT",
+      "state": "UTTARAKHAND",
+      "lat": 29.957,
+      "lon": 78.170,
+      "type": "water",
+      "fecal_coliform_max": 79,
+      "quality": "good",
+      "desc": "Max Fecal Coliform: 79 MPN/100ml"
+    },
+    {
+      "name": "RIVER GANGA AT RISHIKESH",
+      "state": "UTTARAKHAND",
+      "lat": 30.10,
+      "lon": 78.29,
+      "type": "water",
+      "fecal_coliform_max": 94,
+      "quality": "good",
+      "desc": "Max Fecal Coliform range observed near Rishikesh: 43-94 MPN/100ml"
+    },
+    {
+      "name": "RIVER GANGA AT VARANASI U/S",
+      "state": "UTTAR PRADESH",
+      "lat": 25.282,
+      "lon": 82.956,
+      "type": "water",
+      "fecal_coliform_max": 1100,
+      "quality": "good",
+      "desc": "Max Fecal Coliform (U/S Varanasi): 1100 MPN/100ml"
+    },
+    {
+      "name": "RIVER GANGA AT VARANASI D/S, A/C RIVER VARUNA",
+      "state": "UTTAR PRADESH",
+      "lat": 25.33,
+      "lon": 83.05,
+      "type": "water",
+      "fecal_coliform_max": 17000,
+      "quality": "poor",
+      "desc": "Max Fecal Coliform (D/S Varanasi): 17000 MPN/100ml"
+    },
+    {
+      "name": "Jaggampet Market, East Godavari",
+      "state": "Andhra Pradesh",
+      "lat": 17.17, "lon": 82.06, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Jainagar Market, Madhubani",
+      "state": "Bihar",
+      "lat": 26.58, "lon": 86.09, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Chandigarh(Grain/Fruit) Market, Chandigarh",
+      "state": "Chandigarh",
+      "lat": 30.72, "lon": 76.80, "type": "market", "desc": "Farmers' Market (Likely Sector 26 Market)"
+    },
+    {
+      "name": "Harippad Market, Alappuzha",
+      "state": "Kerala",
+      "lat": 9.18, "lon": 76.46, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Elanad VFPCK Market, Thrissur",
+      "state": "Kerala",
+      "lat": 10.66, "lon": 76.35, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Parassala Market, Thiruvananthapuram",
+      "state": "Kerala",
+      "lat": 8.32, "lon": 77.14, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Petlawad Market, Jhabua",
+      "state": "Madhya Pradesh",
+      "lat": 23.00, "lon": 74.80, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Pandhana Market, Khandwa",
+      "state": "Madhya Pradesh",
+      "lat": 21.70, "lon": 76.22, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Segaon Market, Khargone",
+      "state": "Madhya Pradesh",
+      "lat": 21.73, "lon": 75.37, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Ambaha Market, Morena",
+      "state": "Madhya Pradesh",
+      "lat": 26.71, "lon": 78.23, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Shahagarh Market, Sagar",
+      "state": "Madhya Pradesh",
+      "lat": 24.31, "lon": 79.13, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Palari Market, Seoni",
+      "state": "Madhya Pradesh",
+      "lat": 22.38, "lon": 79.68, "type": "market", "desc": "Farmers' Market (Approx. near Seoni)"
+    },
+    {
+      "name": "Vijaypur Market, Sheopur",
+      "state": "Madhya Pradesh",
+      "lat": 25.83, "lon": 77.36, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Barad Market, Shivpuri",
+      "state": "Madhya Pradesh",
+      "lat": 25.25, "lon": 77.95, "type": "market", "desc": "Farmers' Market (Approx. near Shivpuri)"
+    },
+    {
+      "name": "Pune Market, Pune",
+      "state": "Maharashtra",
+      "lat": 18.49, "lon": 73.87, "type": "market", "desc": "Farmers' Market (Likely Market Yard Area)"
+    },
+    {
+      "name": "Jaleswar Market, Balasore",
+      "state": "Odisha",
+      "lat": 21.81, "lon": 87.23, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Boudh Market, Boudh",
+      "state": "Odisha",
+      "lat": 20.84, "lon": 84.32, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Hindol Market, Dhenkanal",
+      "state": "Odisha",
+      "lat": 20.71, "lon": 85.20, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Dasda Market, North Tripura",
+      "state": "Tripura",
+      "lat": 24.19, "lon": 92.16, "type": "market", "desc": "Farmers' Market (Near Kanchanpur)"
+    },
+    {
+      "name": "Kiratpur Market, Bijnor",
+      "state": "Uttar Pradesh",
+      "lat": 29.50, "lon": 78.20, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Gulavati Market, Bulandshahr",
+      "state": "Uttar Pradesh",
+      "lat": 28.60, "lon": 77.79, "type": "market", "desc": "Farmers' Market (Gulaothi)"
+    },
+    {
+      "name": "Shadabad Market, Hathras",
+      "state": "Uttar Pradesh",
+      "lat": 27.44, "lon": 78.04, "type": "market", "desc": "Farmers' Market (Sadabad)"
+    },
+    {
+      "name": "Roorkee Market, Haridwar",
+      "state": "Uttarakhand",
+      "lat": 29.85, "lon": 77.89, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Haldwani Market, Nainital",
+      "state": "Uttarakhand",
+      "lat": 29.22, "lon": 79.52, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Elevancheri VFPCK Market, Palakkad",
+      "state": "Kerala",
+      "lat": 10.59, "lon": 76.67, "type": "market", "desc": "Farmers' Market (Elavanchery)"
+    },
+    {
+      "name": "Alirajpur Market, Alirajpur",
+      "state": "Madhya Pradesh",
+      "lat": 22.30, "lon": 74.35, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Harpalpur Market, Chhatarpur",
+      "state": "Madhya Pradesh",
+      "lat": 25.29, "lon": 79.33, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Manawar Market, Dhar",
+      "state": "Madhya Pradesh",
+      "lat": 22.23, "lon": 75.08, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Katni Market, Katni",
+      "state": "Madhya Pradesh",
+      "lat": 23.83, "lon": 80.40, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Bhikangaon Market, Khargone",
+      "state": "Madhya Pradesh",
+      "lat": 21.87, "lon": 75.96, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Sarangpur Market, Rajgarh",
+      "state": "Madhya Pradesh",
+      "lat": 23.57, "lon": 76.47, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Chaakghat Market, Rewa",
+      "state": "Madhya Pradesh",
+      "lat": 25.04, "lon": 81.72, "type": "market", "desc": "Farmers' Market (Chakghat)"
+    },
+    {
+      "name": "Tikamgarh Market, Tikamgarh",
+      "state": "Madhya Pradesh",
+      "lat": 24.75, "lon": 78.83, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Dumal Market, Puri",
+      "state": "Odisha",
+      "lat": 20.04, "lon": 85.60, "type": "market", "desc": "Farmers' Market (Approx. location)"
+    },
+    {
+      "name": "Nimapara Market, Puri",
+      "state": "Odisha",
+      "lat": 20.06, "lon": 86.01, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Murliganj Market, Madhepura",
+      "state": "Bihar",
+      "lat": 25.87, "lon": 86.99, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Anjad Market, Barwani",
+      "state": "Madhya Pradesh",
+      "lat": 22.03, "lon": 75.05, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Dhamnod Market, Dhar",
+      "state": "Madhya Pradesh",
+      "lat": 22.22, "lon": 75.47, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Gandhwani Market, Dhar",
+      "state": "Madhya Pradesh",
+      "lat": 22.30, "lon": 74.98, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Kukshi Market, Dhar",
+      "state": "Madhya Pradesh",
+      "lat": 22.21, "lon": 74.75, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Rajgarh Market, Dhar",
+      "state": "Madhya Pradesh",
+      "lat": 22.68, "lon": 74.95, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Binaganj Market, Guna",
+      "state": "Madhya Pradesh",
+      "lat": 24.22, "lon": 77.28, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Harsood Market, Khandwa",
+      "state": "Madhya Pradesh",
+      "lat": 22.10, "lon": 76.73, "type": "market", "desc": "Farmers' Market (Harsud)"
+    },
+    {
+      "name": "Khargone Market, Khargone",
+      "state": "Madhya Pradesh",
+      "lat": 21.82, "lon": 75.61, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Tendukheda Market, Narsinghpur",
+      "state": "Madhya Pradesh",
+      "lat": 23.18, "lon": 79.53, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Panna Market, Panna",
+      "state": "Madhya Pradesh",
+      "lat": 24.72, "lon": 80.18, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Khachrod Market, Ujjain",
+      "state": "Madhya Pradesh",
+      "lat": 23.42, "lon": 75.28, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Burgampadu Market, Khammam",
+      "state": "Telangana",
+      "lat": 17.63, "lon": 80.88, "type": "market", "desc": "Farmers' Market (Burgampahad)"
+    },
+    {
+      "name": "Yellandu Market, Khammam",
+      "state": "Telangana",
+      "lat": 17.60, "lon": 80.33, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Bariwala Market, Muktsar",
+      "state": "Punjab",
+      "lat": 30.38, "lon": 74.65, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Jobat Market, Alirajpur",
+      "state": "Madhya Pradesh",
+      "lat": 22.42, "lon": 74.57, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Balaghat Market, Balaghat",
+      "state": "Madhya Pradesh",
+      "lat": 21.80, "lon": 80.18, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Timarni Market, Harda",
+      "state": "Madhya Pradesh",
+      "lat": 22.37, "lon": 77.23, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Indore Market, Indore",
+      "state": "Madhya Pradesh",
+      "lat": 22.72, "lon": 75.86, "type": "market", "desc": "Farmers' Market (City Center/Main Market Area)"
+    },
+    {
+      "name": "Sanwer Market, Indore",
+      "state": "Madhya Pradesh",
+      "lat": 22.97, "lon": 75.83, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Jhabua Market, Jhabua",
+      "state": "Madhya Pradesh",
+      "lat": 22.77, "lon": 74.60, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Badwaha Market, Khargone",
+      "state": "Madhya Pradesh",
+      "lat": 22.25, "lon": 76.04, "type": "market", "desc": "Farmers' Market (Barwaha)"
+    },
+    {
+      "name": "Gadarwada Market, Narsinghpur",
+      "state": "Madhya Pradesh",
+      "lat": 22.92, "lon": 78.78, "type": "market", "desc": "Farmers' Market (Gadarwara)"
+    },
+    {
+      "name": "Sagar Market, Sagar",
+      "state": "Madhya Pradesh",
+      "lat": 23.84, "lon": 78.74, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Satna Market, Satna",
+      "state": "Madhya Pradesh",
+      "lat": 24.58, "lon": 80.83, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Lakhnadon Market, Seoni",
+      "state": "Madhya Pradesh",
+      "lat": 22.60, "lon": 79.60, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Sironj Market, Vidisha",
+      "state": "Madhya Pradesh",
+      "lat": 24.10, "lon": 77.70, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Chogawan Market, Amritsar",
+      "state": "Punjab",
+      "lat": 31.72, "lon": 74.72, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Isagarh Market, Ashoknagar",
+      "state": "Madhya Pradesh",
+      "lat": 24.83, "lon": 77.88, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Shadora Market, Ashoknagar",
+      "state": "Madhya Pradesh",
+      "lat": 24.33, "lon": 77.77, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Khetia Market, Barwani",
+      "state": "Madhya Pradesh",
+      "lat": 21.68, "lon": 74.90, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Badamalhera Market, Chhatarpur",
+      "state": "Madhya Pradesh",
+      "lat": 24.50, "lon": 79.40, "type": "market", "desc": "Farmers' Market (Bada Malhera)"
+    },
+    {
+      "name": "Damoh Market, Damoh",
+      "state": "Madhya Pradesh",
+      "lat": 23.83, "lon": 79.44, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+      "name": "Seoni Market, Seoni",
+      "state": "Madhya Pradesh",
+      "lat": 22.09, "lon": 79.54, "type": "market", "desc": "Farmers' Market"
+    },
+    {
+    "name": "Sharma Auto Works",
+    "state": "Delhi",
+    "lat": 28.6517,
+    "lon": 77.2219,
+    "type": "workshop",
+    "desc": "Specializes in Maruti Suzuki and Hyundai repairs, located near Karol Bagh market."
+    },
+    {
+        "name": "Mumbai Premier Garage",
+        "state": "Maharashtra",
+        "lat": 19.0760,
+        "lon": 72.8777,
+        "type": "workshop",
+        "desc": "Known for luxury car servicing (BMW, Audi) in the Andheri East area."
+    },
+    {
+        "name": "Bangalore Bike Point",
+        "state": "Karnataka",
+        "lat": 12.9716,
+        "lon": 77.5946,
+        "type": "workshop",
+        "desc": "Expertise in Royal Enfield and performance bike modifications, near MG Road."
+    },
+    {
+        "name": "Chennai Car Care Center",
+        "state": "Tamil Nadu",
+        "lat": 13.0827,
+        "lon": 80.2707,
+        "type": "workshop",
+        "desc": "Offers 24/7 breakdown assistance and towing services across Chennai."
+    },
+    {
+        "name": "Kolkata Motors",
+        "state": "West Bengal",
+        "lat": 22.5726,
+        "lon": 88.3639,
+        "type": "workshop",
+        "desc": "Oldest workshop in the Park Street area, known for reliable Ambassador and Taxi repairs."
+    },
+    {
+        "name": "Hyderabad Hi-Tech Auto",
+        "state": "Telangana",
+        "lat": 17.4401,
+        "lon": 78.3489,
+        "type": "workshop",
+        "desc": "Located near HITECH City, specializes in electronic diagnostics and ECU repairs."
+    },
+    {
+        "name": "Ahmedabad Auto Experts",
+        "state": "Gujarat",
+        "lat": 23.0225,
+        "lon": 72.5714,
+        "type": "workshop",
+        "desc": "Focuses on quick servicing and tyre replacements on SG Highway."
+    },
+    {
+        "name": "Jaipur Royal Service",
+        "state": "Rajasthan",
+        "lat": 26.9124,
+        "lon": 75.7873,
+        "type": "workshop",
+        "desc": "Specializing in denting, painting, and car bodywork near MI Road."
+    },
+    {
+        "name": "Pune Peth Auto Garage",
+        "state": "Maharashtra",
+        "lat": 18.5204,
+        "lon": 73.8567,
+        "type": "workshop",
+        "desc": "Traditional workshop in Sadashiv Peth, reliable for older Indian car models."
+    },
+    {
+        "name": "Lucknow Vehicle Solutions",
+        "state": "Uttar Pradesh",
+        "lat": 26.8467,
+        "lon": 80.9462,
+        "type": "workshop",
+        "desc": "Offers comprehensive car and bike services in the Hazratganj area."
+    },
+    {
+        "name": "Kochi Coastal Motors",
+        "state": "Kerala",
+        "lat": 9.9312,
+        "lon": 76.2673,
+        "type": "workshop",
+        "desc": "Expertise in dealing with vehicle issues caused by coastal climate (rust proofing)."
+    },
+    {
+        "name": "Guwahati NorthEast Wheels",
+        "state": "Assam",
+        "lat": 26.1445,
+        "lon": 91.7362,
+        "type": "workshop",
+        "desc": "Specializes in SUV and 4x4 vehicle repairs suitable for regional terrain."
+    },
+    {
+        "name": "Chandigarh Tricity Repair Hub",
+        "state": "Punjab",
+        "lat": 30.7333,
+        "lon": 76.7794,
+        "type": "workshop",
+        "desc": "Modern facility in Industrial Area Phase 1, servicing all major car brands."
+    },
+    {
+        "name": "Indore Malwa Auto Tech",
+        "state": "Madhya Pradesh",
+        "lat": 22.7196,
+        "lon": 75.8577,
+        "type": "workshop",
+        "desc": "Known for engine overhauls and transmission repairs in the Palasia area."
+    },
+    {
+        "name": "Bhubaneswar Kalinga Service",
+        "state": "Odisha",
+        "lat": 20.2961,
+        "lon": 85.8245,
+        "type": "workshop",
+        "desc": "Reliable and affordable workshop for two-wheelers and commuter cars near Rasulgarh."
+    },
+    {
+        "name": "Sharma Auto Works",
+        "state": "Delhi",
+        "lat": 28.6517,
+        "lon": 77.2219,
+        "type": "workshop",
+        "desc": "Specializes in Maruti Suzuki and Hyundai repairs, located near Karol Bagh market."
+    },
+    {
+        "name": "Mumbai Premier Garage",
+        "state": "Maharashtra",
+        "lat": 19.0760,
+        "lon": 72.8777,
+        "type": "workshop",
+        "desc": "Known for luxury car servicing (BMW, Audi) in the Andheri East area."
+    },
+    {
+        "name": "Bangalore Bike Point",
+        "state": "Karnataka",
+        "lat": 12.9716,
+        "lon": 77.5946,
+        "type": "workshop",
+        "desc": "Expertise in Royal Enfield and performance bike modifications, near MG Road."
+    },
+    {
+        "name": "Chennai Car Care Center",
+        "state": "Tamil Nadu",
+        "lat": 13.0827,
+        "lon": 80.2707,
+        "type": "workshop",
+        "desc": "Offers 24/7 breakdown assistance and towing services across Chennai."
+    },
+    {
+        "name": "Kolkata Motors",
+        "state": "West Bengal",
+        "lat": 22.5726,
+        "lon": 88.3639,
+        "type": "workshop",
+        "desc": "Oldest workshop in the Park Street area, known for reliable Ambassador and Taxi repairs."
+    },
+    {
+        "name": "Hyderabad Hi-Tech Auto",
+        "state": "Telangana",
+        "lat": 17.4401,
+        "lon": 78.3489,
+        "type": "workshop",
+        "desc": "Located near HITECH City, specializes in electronic diagnostics and ECU repairs."
+    },
+    {
+        "name": "Ahmedabad Auto Experts",
+        "state": "Gujarat",
+        "lat": 23.0225,
+        "lon": 72.5714,
+        "type": "workshop",
+        "desc": "Focuses on quick servicing and tyre replacements on SG Highway."
+    },
+    {
+        "name": "Jaipur Royal Service",
+        "state": "Rajasthan",
+        "lat": 26.9124,
+        "lon": 75.7873,
+        "type": "workshop",
+        "desc": "Specializing in denting, painting, and car bodywork near MI Road."
+    },
+    {
+        "name": "Pune Peth Auto Garage",
+        "state": "Maharashtra",
+        "lat": 18.5204,
+        "lon": 73.8567,
+        "type": "workshop",
+        "desc": "Traditional workshop in Sadashiv Peth, reliable for older Indian car models."
+    },
+    {
+        "name": "Lucknow Vehicle Solutions",
+        "state": "Uttar Pradesh",
+        "lat": 26.8467,
+        "lon": 80.9462,
+        "type": "workshop",
+        "desc": "Offers comprehensive car and bike services in the Hazratganj area."
+    },
+    {
+        "name": "Kochi Coastal Motors",
+        "state": "Kerala",
+        "lat": 9.9312,
+        "lon": 76.2673,
+        "type": "workshop",
+        "desc": "Expertise in dealing with vehicle issues caused by coastal climate (rust proofing)."
+    },
+    {
+        "name": "Guwahati NorthEast Wheels",
+        "state": "Assam",
+        "lat": 26.1445,
+        "lon": 91.7362,
+        "type": "workshop",
+        "desc": "Specializes in SUV and 4x4 vehicle repairs suitable for regional terrain."
+    },
+    {
+        "name": "Chandigarh Tricity Repair Hub",
+        "state": "Punjab",
+        "lat": 30.7333,
+        "lon": 76.7794,
+        "type": "workshop",
+        "desc": "Modern facility in Industrial Area Phase 1, servicing all major car brands."
+    },
+    {
+        "name": "Indore Malwa Auto Tech",
+        "state": "Madhya Pradesh",
+        "lat": 22.7196,
+        "lon": 75.8577,
+        "type": "workshop",
+        "desc": "Known for engine overhauls and transmission repairs in the Palasia area."
+    },
+    {
+        "name": "Bhubaneswar Kalinga Service",
+        "state": "Odisha",
+        "lat": 20.2961,
+        "lon": 85.8245,
+        "type": "workshop",
+        "desc": "Reliable and affordable workshop for two-wheelers and commuter cars near Rasulgarh."
+    }
+  ]

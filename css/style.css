@@ -44,10 +44,12 @@ header .logo {
 header nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Allow nav items to wrap on smaller screens */
 }
 
 header nav ul li {
-    margin-left: 20px;
+    margin-left: 15px; /* Slightly reduce margin */
+    margin-bottom: 5px; /* Add bottom margin for wrapping */
 }
 
 header nav ul li a {
@@ -55,6 +57,7 @@ header nav ul li a {
     text-decoration: none;
     padding: 5px 10px;
     transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent link text from breaking */
 }
 
 header nav ul li a:hover,
@@ -69,20 +72,21 @@ header nav ul li a.active {
 #hero {
     background: linear-gradient(rgba(0, 90, 179, 0.6), rgba(0, 123, 255, 0.6)), url('../images/hero_background.jpg') no-repeat center center/cover; /* Add a suitable background image */
     color: #fff;
-    height: 60vh;
+    min-height: 50vh; /* Use min-height instead of fixed height */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 40px 20px; /* Add padding */
 }
 
 #hero h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
     margin-bottom: 1rem;
 }
 
 #hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size */
     margin-bottom: 1.5rem;
 }
 
@@ -97,11 +101,18 @@ header nav ul li a.active {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 1em; /* Ensure consistent font size */
 }
 
 .btn:hover {
     background: #218838; /* Darker green */
 }
+
+.btn:disabled { /* Style for disabled buttons */
+    background: #aaa;
+    cursor: not-allowed;
+}
+
 
 .btn-secondary {
      display: inline-block;
@@ -171,11 +182,15 @@ section h3 {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Push link to bottom */
 }
 
 .feature-item img {
     max-width: 60px;
     margin-bottom: 15px;
+    align-self: center; /* Center image */
 }
 
 .feature-item h3 {
@@ -186,11 +201,13 @@ section h3 {
 .feature-item p {
     font-size: 0.95em;
     margin-bottom: 15px;
+    flex-grow: 1; /* Allow paragraph to grow */
 }
 .feature-item a {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
+    margin-top: auto; /* Push link down */
 }
 
 
@@ -198,11 +215,15 @@ section h3 {
 .sdg-icons {
     text-align: center;
     margin-top: 15px;
+    display: flex; /* Use flexbox for better wrapping */
+    flex-wrap: wrap; /* Allow icons to wrap */
+    justify-content: center; /* Center icons */
+    gap: 10px; /* Add gap between icons */
 }
 
 .sdg-icons img {
-    height: 60px; /* Adjust size as needed */
-    margin: 0 10px;
+    height: 50px; /* Slightly smaller */
+    /* margin: 0 5px; Remove fixed margin */
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }
@@ -247,23 +268,35 @@ section h3 {
     margin-bottom: 15px;
     flex-grow: 1; /* Make text take up space */
 }
-.module-card button, .content-card a {
+.module-card button, .content-card a, .content-card button { /* Target buttons in content card too */
     margin-top: auto; /* Push button/link to bottom */
     align-self: flex-start; /* Align button to left */
 }
 
 #module-content-area {
     background: #fff;
-    padding: 30px;
+    padding: 20px; /* Adjust padding */
     margin-top: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    min-height: 200px;
+    min-height: 300px; /* Adjust min height */
+    overflow-wrap: break-word; /* Break long words if needed */
+}
+#module-content-area h2 { /* Style title inside loaded content */
+    text-align: left;
+    margin-bottom: 20px;
 }
 #module-content-area h3 {
     text-align: left;
     margin-bottom: 15px;
 }
+#module-content-area iframe { /* Ensure iframes are responsive */
+    max-width: 100%;
+    display: block;
+    margin: 15px 0; /* Add some vertical margin */
+    border: none; /* Ensure no border */
+}
+
 
 /* Quiz Styles (Basic) */
 .quiz-question {
@@ -279,7 +312,17 @@ section h3 {
     display: block;
     margin-bottom: 5px;
     cursor: pointer;
+    padding: 5px; /* Add padding for easier clicking */
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
+.quiz-options label:hover {
+    background-color: #f0f0f0;
+}
+.quiz-options input[type="radio"] {
+    margin-right: 8px;
+}
+
 .quiz-feedback {
     margin-top: 10px;
     padding: 10px;
@@ -320,7 +363,7 @@ section h3 {
     font-size: 0.9em;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px 15px; /* Row gap and column gap */
     align-items: center;
 }
 .legend-icon {
@@ -346,6 +389,7 @@ section h3 {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1em; /* Ensure consistent font size */
 }
 .forum-post-form textarea {
     height: 100px;
@@ -408,9 +452,13 @@ section h3 {
 }
 /* Style selects to look similar to inputs */
 .form-group select {
-     appearance: none; /* Optional: for custom dropdown arrow */
-     background-color: #fff; /* Or another background */
-     /* Add background arrow image if desired */
+    appearance: none; /* Optional: for custom dropdown arrow */
+    background-color: #fff; /* Or another background */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E"); /* Basic dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+    padding-right: 30px; /* Make space for arrow */
 }
 
 #calculator-results {
@@ -442,13 +490,80 @@ section h3 {
 
 #personalized-tips {
     list-style: disc;
-    padding-left: 40px; /* Indent tips */
+    padding-left: 25px; /* Adjust indent */
     margin-top: 10px;
 }
 #personalized-tips li {
     margin-bottom: 8px;
     color: #1e5b1e; /* Green color for positive tips */
 }
+
+/* === Label Analyzer Page Styles === */
+#image-preview-container {
+    margin-top: 20px;
+    text-align: center; /* Center the preview image */
+}
+#image-preview {
+    max-width: 100%;
+    max-height: 300px; /* Limit preview height */
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    display: none; /* Hide initially */
+    object-fit: contain; /* Prevent stretching */
+}
+#label-upload {
+    display: none; /* Hide the default file input */
+}
+.upload-label {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0; /* Add some margin */
+}
+.upload-label:hover {
+    background-color: #0056b3;
+}
+#analyze-button {
+    margin-top: 15px;
+    /* display: block; Remove this if you want it inline */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+ #loading-indicator {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #eef;
+    border: 1px solid #cce;
+    border-radius: 5px;
+    text-align: center;
+    color: #0056b3;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+}
+#analysis-result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    white-space: pre-wrap; /* Preserve formatting from analysis */
+    display: none; /* Hidden initially */
+    text-align: left; /* Ensure text is left-aligned */
+}
+ #analysis-result h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #28a745; /* Green for results header */
+    text-align: left; /* Ensure heading is left-aligned */
+ }
+ #analysis-result p {
+    text-align: left; /* Ensure paragraphs are left-aligned */
+    margin-bottom: 10px; /* Add space between paragraphs */
+ }
 
 
 /* Footer */
@@ -472,17 +587,25 @@ footer p {
     }
     header nav ul {
         margin-top: 10px;
-        justify-content: center;
+        justify-content: center; /* Center nav items */
+        padding-left: 0; /* Remove default padding */
     }
      header nav ul li {
-        margin: 0 10px;
+        margin-left: 8px; /* Reduce space further */
+        margin-right: 8px;
     }
+     header nav ul li a {
+        padding: 5px; /* Reduce padding */
+     }
 
+    #hero {
+        min-height: 40vh; /* Adjust height for smaller screens */
+    }
     #hero h1 {
-        font-size: 2.5rem;
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
     }
      #hero p {
-        font-size: 1rem;
+        font-size: clamp(0.9rem, 2.5vw, 1rem);
     }
 
     .feature-grid, .module-list, .content-grid {
@@ -495,4 +618,49 @@ footer p {
     .page-padding h1 {
         font-size: 1.8em;
     }
+
+    #map {
+        height: 350px; /* Reduce map height on smaller screens */
+    }
+
+    .map-legend {
+        font-size: 0.8em; /* Smaller legend text */
+        gap: 5px 10px;
+    }
+
+    /* Adjust form elements for smaller screens */
+    .form-group input[type="number"],
+    .form-group select,
+    .forum-post-form input[type="text"],
+    .forum-post-form textarea {
+        font-size: 0.95em; /* Slightly smaller font in forms */
+    }
+
+    #calculator-results {
+        padding: 15px; /* Reduce padding */
+    }
+    #footprint-value {
+        font-size: 1.2em; /* Smaller result value */
+    }
+    #personalized-tips {
+        padding-left: 20px; /* Less indent */
+    }
+
+    /* Analyzer page responsive adjustments */
+    #image-preview {
+        max-height: 250px; /* Smaller preview */
+    }
+    .upload-label, #analyze-button {
+        width: 80%; /* Make buttons wider for easier tapping */
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+    }
+     #analyze-button {
+        margin-top: 10px;
+     }
+     #analysis-result {
+        padding: 15px;
+     }
 }
