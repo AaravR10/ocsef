@@ -15,16 +15,16 @@ if (document.getElementById('map')) {
 
     // 3. Define Custom Icons
     const businessIcon = L.icon({ iconUrl: 'images/map_pin_business.png', iconSize: [32, 37], iconAnchor: [16, 37], popupAnchor: [0, -37] });
-    const workshopIcon = L.icon({ iconUrl: 'images/map_pin_workshop.png', iconSize: [32, 37], iconAnchor: [16, 37], popupAnchor: [0, -37] });
-    const marketIcon = L.icon({ iconUrl: 'images/map_pin_market.png', iconSize: [32, 37], iconAnchor: [16, 37], popupAnchor: [0, -37] }); // Make sure this icon exists
+    const workshopIcon = L.icon({ iconUrl: 'images/map_pin_workshop.png', iconSize: [32, 37], iconAnchor: [16, 37], popupAnchor: [0, -37] }); // Make sure this icon exists
+    const marketIcon = L.icon({ iconUrl: 'images/map_pin_market.png', iconSize: [32, 37], iconAnchor: [16, 37], popupAnchor: [0, -37] });
     const waterGoodIcon = L.icon({ iconUrl: 'images/map_pin_water_good.png', iconSize: [25, 30], iconAnchor: [12, 30], popupAnchor: [0, -30] });
     const waterPoorIcon = L.icon({ iconUrl: 'images/map_pin_water_poor.png', iconSize: [25, 30], iconAnchor: [12, 30], popupAnchor: [0, -30] });
 
     // --- Define icon mapping ---
     const iconMapping = {
         'business': businessIcon,
-        'workshop': workshopIcon,
-        'market': marketIcon, // Added market to mapping
+        'workshop': workshopIcon, // Added workshop to mapping
+        'market': marketIcon,
         'water_good': waterGoodIcon,
         'water_poor': waterPoorIcon
     };
@@ -61,16 +61,27 @@ if (document.getElementById('map')) {
                                  State: ${loc.state || 'N/A'}<br>
                                  Quality: <span style="font-weight:bold; color:${qualityStatus === 'good' ? 'green' : 'red'};">${qualityStatus.charAt(0).toUpperCase() + qualityStatus.slice(1)}</span><br>
                                  <small>(${loc.desc || 'Details unavailable'})</small>`;
-                } else if (loc.type === 'market') { // **** ADDED THIS BLOCK ****
+                } else if (loc.type === 'market') {
                     iconToUse = iconMapping['market'];
                     popupText = `<b>${loc.name || 'Unnamed Market'}</b><br>
                                  Type: Farmers' Market<br>
                                  State: ${loc.state || 'N/A'}<br>
                                  <small>(${loc.desc || 'Local produce'})</small>`;
+                } else if (loc.type === 'workshop') { // **** ADDED THIS BLOCK ****
+                    iconToUse = iconMapping['workshop'];
+                    popupText = `<b>${loc.name || 'Unnamed Workshop'}</b><br>
+                                 Type: Repair Workshop<br>
+                                 State: ${loc.state || 'N/A'}<br>
+                                 <small>(${loc.desc || 'Repair services'})</small>`;
                 } else if (iconMapping[loc.type]) {
-                    // Handle other types (business, workshop) if defined later
+                    // Handle other known types (e.g., 'business') if defined later in iconMapping
                     iconToUse = iconMapping[loc.type];
-                    popupText = `<b>${loc.name || 'Unnamed Location'}</b><br>${loc.desc || 'Details unavailable'}`;
+                     // Capitalize type for display
+                    const typeDisplay = loc.type.charAt(0).toUpperCase() + loc.type.slice(1);
+                    popupText = `<b>${loc.name || 'Unnamed Location'}</b><br>
+                                 Type: ${typeDisplay}<br>
+                                 State: ${loc.state || 'N/A'}<br>
+                                 <small>(${loc.desc || 'Details unavailable'})</small>`;
                 } else {
                     // Fallback to default icon if type is unknown
                     console.warn(`Unknown location type "${loc.type}" for ${loc.name}. Using default icon.`);

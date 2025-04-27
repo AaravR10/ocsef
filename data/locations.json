@@ -753,5 +753,124 @@
         "lon": 85.8245,
         "type": "workshop",
         "desc": "Reliable and affordable workshop for two-wheelers and commuter cars near Rasulgarh."
-    }
+    },
+    {
+        "name": "GreenSoul Organics",
+        "state": "Karnataka",
+        "lat": 12.9716,
+        "lon": 77.5946,
+        "type": "business",
+        "desc": "Retail store in Bangalore selling certified organic groceries, produce, and eco-friendly home products."
+    },
+      {
+        "name": "Solaris Energy Solutions",
+        "state": "Gujarat",
+        "lat": 23.0225,
+        "lon": 72.5714,
+        "type": "business",
+        "desc": "Ahmedabad-based company providing rooftop solar panel installation for residential and commercial clients."
+      },
+      {
+        "name": "Waste Warriors Collective",
+        "state": "Uttarakhand",
+        "lat": 30.3165,
+        "lon": 78.0322,
+        "type": "business",
+        "desc": "Dehradun non-profit focusing on waste management solutions, recycling drives, and upcycling workshops."
+      },
+      {
+        "name": "Fabindia Experience Center",
+        "state": "Delhi",
+        "lat": 28.6139,
+        "lon": 77.2090,
+        "type": "business",
+        "desc": "Large retailer promoting handloom textiles, traditional crafts, and organic products sourced ethically across India."
+      },
+      {
+        "name": "Auroville Eco Services",
+        "state": "Tamil Nadu",
+        "lat": 12.0077,
+        "lon": 79.8141,
+        "type": "business",
+        "desc": "Based near Puducherry, offers consultancy and implementation for renewable energy, afforestation, and sustainable building."
+      },
+      {
+        "name": "Mumbai Compost Initiative",
+        "state": "Maharashtra",
+        "lat": 19.0760,
+        "lon": 72.8777,
+        "type": "business",
+        "desc": "Promotes community composting projects and sells home composting kits in various Mumbai neighborhoods."
+      },
+      {
+        "name": "Jaipur Bloc Prints",
+        "state": "Rajasthan",
+        "lat": 26.9124,
+        "lon": 75.7873,
+        "type": "business",
+        "desc": "Workshop preserving traditional block printing techniques using natural vegetable dyes on organic cotton."
+      },
+      {
+        "name": "KERALA Backwater Ecotours",
+        "state": "Kerala",
+        "lat": 9.4981,
+        "lon": 76.3388,
+        "type": "business",
+        "desc": "Alappuzha-based tour operator offering low-impact houseboat tours focusing on local culture and environmental preservation."
+      },
+      {
+        "name": "Himalayan Hemp Co.",
+        "state": "Himachal Pradesh",
+        "lat": 31.1048,
+        "lon": 77.1734,
+        "type": "business",
+        "desc": "Shimla company utilizing sustainable hemp fiber for textiles, clothing, and biodegradable products."
+      },
+      {
+        "name": "EarthGreens Hydroponics",
+        "state": "Telangana",
+        "lat": 17.3850,
+        "lon": 78.4867,
+        "type": "business",
+        "desc": "Hyderabad urban farm growing leafy greens and vegetables using water-efficient hydroponic systems."
+      },
+      {
+        "name": "Bamboo India",
+        "state": "Maharashtra",
+        "lat": 18.5204,
+        "lon": 73.8567,
+        "type": "business",
+        "desc": "Pune-based social enterprise creating everyday products like toothbrushes and speakers from sustainable bamboo."
+      },
+      {
+        "name": "Kolkata Cycle Sangha",
+        "state": "West Bengal",
+        "lat": 22.5726,
+        "lon": 88.3639,
+        "type": "business",
+        "desc": "Promotes cycling as sustainable urban transport, offers repairs, rentals, and advocates for cycle lanes."
+      },
+      {
+        "name": "Nature's Basket (Organic Section)",
+        "state": "Various",
+        "lat": 19.0760,  "lon": 72.8777,
+        "type": "business",
+        "desc": "Gourmet grocery chain (example location Mumbai) with dedicated sections for organic and sustainably sourced food items."
+      },
+      {
+        "name": "Re-imagined Resources",
+        "state": "Goa",
+        "lat": 15.4909,
+        "lon": 73.8278,
+        "type": "business",
+        "desc": "Panaji workshop specializing in upcycling waste materials like glass bottles and scrap metal into art and decor."
+      },
+      {
+        "name": "Assam Ethical Tea Estate",
+        "state": "Assam",
+        "lat": 26.7509,
+        "lon": 94.2037,
+        "type": "business",
+        "desc": "Jorhat region tea garden practicing organic farming methods and ensuring fair wages for workers."
+      }
   ]
