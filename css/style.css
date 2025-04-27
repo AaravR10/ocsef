@@ -222,7 +222,7 @@ section h3 {
 }
 
 .sdg-icons img {
-    height: 50px; /* Slightly smaller */
+    height: 130px; /* Slightly smaller */
     /* margin: 0 5px; Remove fixed margin */
     opacity: 0.8;
     transition: opacity 0.3s ease;
