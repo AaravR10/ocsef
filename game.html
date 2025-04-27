@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCity Game - EcoLeap</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific styles for the game page */
+        #game-frame-container {
+            position: relative;
+            width: 100%;
+            /* Calculate height based on a 16:9 aspect ratio, but allow flexibility */
+            /* padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            /* Or set a fixed/viewport height */
+            height: 85vh; /* Make it take most of the viewport height */
+            margin-top: 20px;
+            overflow: hidden; /* Hide potential scrollbars on the container */
+        }
+
+        #game-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove default iframe border */
+        }
+
+         /* Adjust page padding if needed */
+         .page-padding {
+            padding-bottom: 10px; /* Reduce bottom padding */
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+             <img src="images/logo.png" alt="EcoLeap Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="modules.html">Learning Modules</a></li>
+                    <li><a href="energy.html">Clean Energy</a></li>
+                    <li><a href="community.html">Community Hub</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="analyzer.html">Label Analyzer</a></li>
+                    <li><a href="recipe.html">Recipe Generator</a></li>
+                    <li><a href="game.html" class="active">Game</a></li> <!-- Added Game Link -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-padding">
+        <h1>EcoCity</h1>
+        <p>Build a sustainable city! Make choices to balance growth with environmental health.</p>
+        <!-- (You might want to remove the <p> above if the game has its own intro) -->
+
+        <!-- Iframe Container -->
+        <div id="game-frame-container">
+            <iframe
+                id="game-iframe"
+                src="game/index.html" <!-- Points to the index file inside your /game folder -->
+                title="EcoCity Game"
+                frameborder="0"
+                allowfullscreen>
+                    Your browser does not support iframes. Please update your browser or visit the game directly.
+            </iframe>
+        </div>
+
+         <p style="text-align:center; margin-top: 15px;"><small>If the game doesn't load, ensure your browser supports iframes and local file access (if testing locally).</small></p>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 EcoLeap</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script> <!-- General scripts if needed -->
+</body>
+</html>

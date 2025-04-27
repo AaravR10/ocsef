@@ -1,5 +1,4 @@
 // Get DOM Elements
-const apiKeyInput = document.getElementById('api-key-input');
 const imageUploadInput = document.getElementById('label-upload');
 const useCameraButton = document.getElementById('use-camera-button');
 const cameraContainer = document.getElementById('camera-container');
@@ -18,35 +17,8 @@ const errorMessageP = document.getElementById('error-message');
 
 let imageDataUrl = null;
 let currentStream = null;
-const API_KEY_COOKIE_NAME = 'geminiApiKey';
 
-// --- Cookie Helper Functions (Same as before) ---
-function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
-    // console.log("Cookie set:", name); // Keep commented unless debugging
-}
 
-function getCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) {
-            const value = c.substring(nameEQ.length, c.length);
-            // console.log("Cookie found:", name, "Value:", value ? '******' : '(empty)'); // Keep commented unless debugging
-            return value;
-            }
-    }
-    // console.log("Cookie not found:", name); // Keep commented unless debugging
-    return null;
-}
 
 // --- Basic Markdown to HTML Converter ---
 /**
@@ -128,17 +100,10 @@ imageUploadInput.addEventListener('change', (event) => {
     } else { resetImageState(); }
 });
 
-// --- Event Listener for API Key Input ---
-apiKeyInput.addEventListener('input', () => {
-    const apiKey = apiKeyInput.value.trim();
-    setCookie(API_KEY_COOKIE_NAME, apiKey, 30);
-    checkEnableButton();
-});
 
 // --- Function to Enable/Disable Analyze Button ---
 function checkEnableButton() {
-     const apiKey = apiKeyInput.value.trim();
-     analyzeButton.disabled = !(apiKey && imageDataUrl); // Simplified check
+     analyzeButton.disabled = !(imageDataUrl); // Simplified check
 }
 
 // --- Camera Control Event Listeners ---
@@ -205,9 +170,8 @@ function takePhoto() {
 
 // --- Event Listener for Analyze Button ---
 analyzeButton.addEventListener('click', () => {
-    const apiKey = apiKeyInput.value.trim();
+    const apiKey = 'AIzaSyBlT8qRsgiJyVTvi15ViNHgepSDA-BH1uI'
     errorMessageP.textContent = '';
-    if (!apiKey) { errorMessageP.textContent = "Please enter your Google AI API Key."; return; }
     if (!imageDataUrl) { errorMessageP.textContent = "Please select or capture an image first."; return; }
     loadingIndicator.style.display = 'block'; analysisResultDiv.style.display = 'none';
     analyzeButton.disabled = true;
@@ -216,7 +180,7 @@ analyzeButton.addEventListener('click', () => {
 
 // --- Function to Call Google Gemini API (Insecure - same core logic) ---
 async function callRealGeminiApi(apiKey, imageBase64) {
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBlT8qRsgiJyVTvi15ViNHgepSDA-BH1uI`;
     const match = imageBase64.match(/^data:(image\/\w+);base64,(.+)$/);
     if (!match) { handleAnalysisError("Invalid image data format."); return; }
     const mimeType = match[1]; const base64Data = match[2];

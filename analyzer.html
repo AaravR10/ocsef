@@ -6,10 +6,6 @@
     <title>Label Analyzer - EcoLeap</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Add specific styles for this page */
-        #api-key-input {
-            width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;
-        }
         .button-container { /* Container for upload/camera buttons */
              text-align: center; margin-bottom: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;
         }
@@ -78,6 +74,7 @@
                     <li><a href="calculator.html">Calculator</a></li>
                     <li><a href="analyzer.html" class="active">Label Analyzer</a></li>
                     <li><a href="recipe.html">Recipe Generator</a></li>
+                    <li><a href="game.html">Game</a></li>
                 </ul>
             </nav>
         </div>
@@ -85,14 +82,7 @@
 
     <main class="container page-padding">
         <h1>Food Label Analyzer</h1>
-        <p>Enter <strong>your own</strong> Google AI API Key</p>
         <p><small><strong>Disclaimer:</strong> This is for demonstration/testing only. Do not rely on this for actual decisions.</small></p>
-
-        <!-- API Key Input -->
-         <div class="form-group">
-            <label for="api-key-input">Your Google AI API Key (Saved in Cookie):</label>
-            <input type="password" id="api-key-input" placeholder="Enter your API key here">
-         </div>
 
         <!-- Action Buttons: Upload or Use Camera -->
         <div class="button-container">
@@ -120,7 +110,7 @@
         </div>
 
         <!-- Analyze Button -->
-         <button id="analyze-button" class="btn" disabled>Analyze Label (Requires API Key & Image)</button>
+         <button id="analyze-button" class="btn" disabled>Analyze Label (Requires Image)</button>
 
         <!-- Loading Indicator -->
         <div id="loading-indicator">

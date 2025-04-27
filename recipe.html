@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Specific styles for this page */
-        #api-key-input,
         #ingredients-input {
             width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em;
         }
@@ -54,6 +53,7 @@
                     <li><a href="calculator.html">Calculator</a></li>
                     <li><a href="analyzer.html">Label Analyzer</a></li>
                     <li><a href="recipe.html" class="active">Recipe Generator</a></li>
+                    <li><a href="game.html">Game</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,14 +61,8 @@
 
     <main class="container page-padding">
         <h1>Sustainable Recipe Generator (AI Demo)</h1>
-        <p>Enter ingredients you have on hand (one per line or comma-separated). Provide your Google AI API Key. The AI will generate a healthy and sustainable recipe suggestion.</p>
+        <p>Enter ingredients you have on hand (one per line or comma-separated). The AI will generate a healthy and sustainable recipe suggestion.</p>
         <p><small><strong>Disclaimer:</strong>Recipes are AI-generated suggestions; use culinary judgment.</small></p>
-
-        <!-- API Key Input -->
-         <div class="form-group">
-            <label for="api-key-input">Your Google AI API Key (Saved in Cookie):</label>
-            <input type="password" id="api-key-input" placeholder="Enter your API key here">
-         </div>
 
         <!-- Ingredients Input -->
         <div class="form-group">

@@ -1,34 +1,9 @@
 // Get DOM Elements
-const apiKeyInput = document.getElementById('api-key-input');
 const ingredientsInput = document.getElementById('ingredients-input');
 const generateButton = document.getElementById('generate-button');
 const loadingIndicator = document.getElementById('loading-indicator');
 const recipeResultDiv = document.getElementById('recipe-result');
 
-// Define API Key Cookie Name (same as analyzer.js if sharing the key)
-const API_KEY_COOKIE_NAME = 'geminiApiKey';
-
-// --- Cookie Helper Functions (Copied from analyzer.js) ---
-function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-        const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
-}
-
-function getCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
 
 // --- Basic Markdown to HTML Converter (Copied from analyzer.js) ---
 function simpleMarkdownToHtml(markdownText) {
@@ -64,28 +39,19 @@ function simpleMarkdownToHtml(markdownText) {
 // --- Event Listener for Ingredients Input ---
 ingredientsInput.addEventListener('input', checkEnableButton);
 
-// --- Event Listener for API Key Input ---
-apiKeyInput.addEventListener('input', () => {
-    const apiKey = apiKeyInput.value.trim();
-    setCookie(API_KEY_COOKIE_NAME, apiKey, 30); // Save for 30 days
-    checkEnableButton();
-});
-
 // --- Function to Enable/Disable Generate Button ---
 function checkEnableButton() {
-     const apiKey = apiKeyInput.value.trim();
+     const apiKey = 'AIzaSyBlT8qRsgiJyVTvi15ViNHgepSDA-BH1uI'
      const ingredients = ingredientsInput.value.trim();
-     generateButton.disabled = !(apiKey && ingredients); // Enable only if both fields have content
+     generateButton.disabled = !(ingredients); // Enable only if both fields have content
 }
 
 // --- Event Listener for Generate Button ---
 generateButton.addEventListener('click', () => {
-    const apiKey = apiKeyInput.value.trim();
+    const apiKey = 'AIzaSyBlT8qRsgiJyVTvi15ViNHgepSDA-BH1uI';
     const ingredients = ingredientsInput.value.trim();
     recipeResultDiv.style.display = 'none'; // Clear previous results
     recipeResultDiv.innerHTML = ''; // Clear content completely
-
-    if (!apiKey) { alert("Please enter your Google AI API Key."); return; } // Use alert for simplicity
     if (!ingredients) { alert("Please enter some ingredients."); return; }
 
     loadingIndicator.style.display = 'block';
@@ -100,8 +66,8 @@ generateButton.addEventListener('click', () => {
 async function callRecipeGeneratorApi(apiKey, ingredientsList) {
     // ** WARNING: Using API Key in client-side is insecure! **
     // Use a text generation model like gemini-pro or gemini-1.5-flash
-    const model = "gemini-1.5-flash"; // Or "gemini-pro"
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+    const model = "gemini-2.0-flash"; // Or "gemini-pro"
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=AIzaSyBlT8qRsgiJyVTvi15ViNHgepSDA-BH1uI`;
 
     // Construct a detailed prompt
     const prompt = `Based on the following ingredients, create a healthy and sustainable recipe suggestion.
