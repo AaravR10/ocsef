@@ -43,27 +43,43 @@
 
             <!-- Guide 2: DIY Solar Phone Charger -->
              <div class="content-card">
-                 <img src="images/diy_charger_icon.png" alt="DIY Charger Icon">
+                 <img src="images/diy_charger_icon.png" alt="DIY Charger Icon" style="cursor: pointer;" onclick="showPhoneExplanation()">
                 <h2>DIY: Build a Solar Phone Charger</h2>
-                <p>A step-by-step guide using simple components. (Full guide coming soon!)</p>
-                <a href="#" class="btn-secondary disabled">View Guide (Coming Soon)</a>
+                <p>A step-by-step guide using simple components.</p>
+                <div id="phone-explanation" style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+                    <p>1. Get small solar panel (5-6V, 1A+), optional 5V regulator, USB port, wires.</p>
+                    <p>2. Connect panel to regulator (if needed).</p>
+                    <p>3. Connect regulator (or panel) to USB port.</p>
+                    <p>4. Test USB voltage: must be stable 5V.</p>
+                    <p>5. Charge phone in sun. Enclose parts for safety.</p>
+                    <button onclick="hidePhoneExplanation()">Close</button>
+                </div>
             </div>
 
             <!-- Guide 3: Home Energy Audit -->
             <div class="content-card">
-                 <img src="images/energy_audit_icon.png" alt="Energy Audit Icon">
+                 <img src="images/energy_audit_icon.png" alt="Energy Audit Icon" style="cursor: pointer;" onclick="showHomeExplanation()">
                 <h2>Understanding Home Energy Audits</h2>
                 <p>Learn how to identify energy waste in your home and prioritize improvements.</p>
-                 <a href="#" class="btn-secondary disabled">Learn More (Coming Soon)</a>
+                <div id="home-explanation" style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #ccc; background: #f9f9f9;">
+                    <p>Detect: Room by room, note phantom loads, bulb types/usage, drafts, vent blocks, thermostat, filter, water heater temp, leaks, appliance age/seals, usage habits.</p>
+                    <p>Prioritize</p>
+                    <ul> 
+                        <li>High: Unplug all devices, LEDs, turn off lights, adjust thermostat, fix leaks.</li>
+                        <li>Medium: Seal drafts, change filters, smart thermostat, power strips, insulate pipes.</li>
+                        <li>Low: New appliances, insulation, duct sealing, low-flow fixtures.</li>
+                    </ul>
+                    <p>Act & Track: Make changes, monitor energy bills to see savings.</p>
+                    <button onclick="hideHomeExplanation()">Close</button>
+                </div>
             </div>
-             <!-- Add more guides -->
         </div>
     </main>
 
 
     <footer>
         <div class="container">
-            <p>© 2023 Sustainable Living Hub.</p>
+            <p>© 2025 EcoLeap</p>
         </div>
     </footer>
     <script src="js/script.js"></script> <!-- For general things like explanations -->

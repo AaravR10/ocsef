@@ -81,7 +81,67 @@ const moduleData = {
     "renewability": {
         title: "Understanding Renewable Energy Sources",
         type: "video2",
-        url: "https://youtu.be/s54ls3Y3By4"
+        url: "https://youtu.be/s54ls3Y3By4",
+        content: `
+        <h3>Interactive Quiz: Test Your Knowledge!</h3>
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p>1. What does "renewability" mean?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q1" value="a"> Using resources that are available in large amounts</label>
+                        <label><input type="radio" name="q1" value="b"> Using resources that can naturally replenish over time</label>
+                        <label><input type="radio" name="q1" value="c"> Reducing the use of all resources entirely</label>
+                        <label><input type="radio" name="q1" value="d"> Using resources only once and then discarding them</label>
+                    </div>
+                    <button onclick="checkQuizAnswer('q1', 'b')">Check Answer</button>
+                    <div class="quiz-feedback" id="feedback-q1"></div>
+                </div>
+                <div class="quiz-question">
+                    <p>2. Which of the following is an example of a renewable resource?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q2" value="a"> Coal</label>
+                        <label><input type="radio" name="q2" value="b"> Oil</label>
+                        <label><input type="radio" name="q2" value="c"> Wind</label>
+                        <label><input type="radio" name="q2" value="d"> Natural Gas</label>
+                    </div>
+                    <button onclick="checkQuizAnswer('q2', 'c')">Check Answer</button>
+                    <div class="quiz-feedback" id="feedback-q2"></div>
+                </div>
+                <div class="quiz-question">
+                    <p>3. What is sustainability focused on?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q3" value="a"> Saving money on electricity bills</label>
+                        <label><input type="radio" name="q3" value="b"> Using resources in a way that doesn’t harm future generations</label>
+                        <label><input type="radio" name="q3" value="c"> Producing as much as possible quickly</label>
+                        <label><input type="radio" name="q3" value="d"> Using resources without any restrictions</label>
+                    </div>
+                    <button onclick="checkQuizAnswer('q3', 'b')">Check Answer</button>
+                    <div class="quiz-feedback" id="feedback-q3"></div>
+                </div>
+                <div class="quiz-question">
+                    <p>4. What is one simple sustainable practice you can do at home?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q4" value="a"> Use plastic bags every time you shop</label>
+                        <label><input type="radio" name="q4" value="b"> Leave the faucet running while brushing your teeth</label>
+                        <label><input type="radio" name="q4" value="c"> Fix leaky faucets to reduce water waste</label>
+                        <label><input type="radio" name="q4" value="d"> Throw away aluminum cans instead of recycling</label>
+                    </div>
+                    <button onclick="checkQuizAnswer('q4', 'c')">Check Answer</button>
+                    <div class="quiz-feedback" id="feedback-q4"></div>
+                </div>
+                <div class="quiz-question">
+                    <p>5. What could happen if we don’t use renewable and sustainable practices?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q5" value="a"> The planet will remain unaffected</label>
+                        <label><input type="radio" name="q5" value="b"> Climate change will slow down</label>
+                        <label><input type="radio" name="q5" value="c"> The environment will suffer, and future generations will face problems</label>
+                        <label><input type="radio" name="q5" value="d"> Resources will become unlimited</label>
+                    </div>
+                    <button onclick="checkQuizAnswer('q5', 'c')">Check Answer</button>
+                    <div class="quiz-feedback" id="feedback-q5"></div>
+                </div>
+            </div>
+                <a href="#" class="btn-secondary disabled">Learn More About Sustainability (Link Coming Soon)</a>`
     },
     "sustainable-clothing": {
         title: "Sustainable Clothing Choices",
@@ -90,7 +150,35 @@ const moduleData = {
     },
     "government-policies": {
         title: "Government Policies",
-        type: "video3"
+        type: "video3",
+        url: "https://youtu.be/blYo-MvuS2Y",
+        content: `
+        <h3>Interactive Quiz: Test Your Knowledge!</h3>
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p>1. What kind of government regulation can help reduce the environmental impact of energy production?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q1" value="a"> Fining companies that break renewable energy laws</label>
+                        <label><input type="radio" name="q1" value="b"> Removing limits on pollution</label>
+                        <label><input type="radio" name="q1" value="c"> Encouraging the use of older, cheaper energy systems</label>
+                        <label><input type="radio" name="q1" value="d"> Ignoring climate change reports</label>
+                    </div>
+                    <button onclick="checkQuizAnswer('q1', 'a')">Check Answer</button>
+                    <div class="quiz-feedback" id="feedback-q1"></div>
+                </div>
+                <div class="quiz-question">
+                    <p>2. Which government policy is most effective in encouraging the use of renewable energy?</p>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="q2" value="a"> Subsidizing fossil fuel companies</label>
+                        <label><input type="radio" name="q2" value="b"> Providing tax incentives for solar panel installation</label>
+                        <label><input type="radio" name="q2" value="c"> Limiting investment in clean energy research</label>
+                        <label><input type="radio" name="q2" value="d"> Increasing tariffs on wind energy equipment</label>
+                    </div>
+                    <button onclick="checkQuizAnswer('q2', 'b')">Check Answer</button>
+                    <div class="quiz-feedback" id="feedback-q2"></div>
+                </div>
+            </div>
+            <a href="#" class="btn-secondary disabled">Download Label Guide (PDF Coming Soon)</a>`
     }
 };
 
@@ -126,6 +214,12 @@ function loadModule(moduleId) {
             contentHTML = `
                 <h2>${data.title}</h2>
                 <iframe width="853" height="480" src="https://www.youtube.com/embed/s54ls3Y3By4" title="Video Lesson: Understanding Renewable Energy Sources" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                ${data.content}`; // Append the static content (quiz) after the video
+        } else if (data.type === 'video3' && data.content) {
+            // Use the static content if the 'content' property exists
+            contentHTML = `
+                <h2>${data.title}</h2>
+                <iframe width="853" height="480" src="https://youtube.com/embed/blYo-MvuS2Y" title="Video: Government Policies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 ${data.content}`; // Append the static content (quiz) after the video
         } else if (data.content) {
             // Use the static content if the 'content' property exists

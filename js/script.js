@@ -33,6 +33,34 @@ function hideSolarExplanation() {
     }
 }
 
+function showPhoneExplanation() {
+    const explanationDiv = document.getElementById('phone-explanation');
+    if (explanationDiv) {
+        explanationDiv.style.display = 'block';
+    }
+}
+
+function hidePhoneExplanation() {
+     const explanationDiv = document.getElementById('phone-explanation');
+    if (explanationDiv) {
+        explanationDiv.style.display = 'none';
+    }
+}
+
+function showHomeExplanation() {
+    const explanationDiv = document.getElementById('home-explanation');
+    if (explanationDiv) {
+        explanationDiv.style.display = 'block';
+    }
+}
+
+function hideHomeExplanation() {
+     const explanationDiv = document.getElementById('home-explanation');
+    if (explanationDiv) {
+        explanationDiv.style.display = 'none';
+    }
+}
+
 
 // --- Functions for Community Page (Forum Demo) ---
 function addForumPost() {
